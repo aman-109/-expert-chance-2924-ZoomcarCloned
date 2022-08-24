@@ -1,7 +1,9 @@
 import { Link, Text } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 import "../../Styles/Navbar/navTag.css"
 
 export default function NavTag() {
+  const navigate = useNavigate()
   return (
     <>
       <nav>
@@ -19,7 +21,7 @@ export default function NavTag() {
             <Link href="/zoomcar-mobility-services">ZMS</Link>
           </li>
           <li>
-            <Link href="/login" class="">
+            <Link onClick={()=>navigate("/login")} class="">
               Login/Signup
             </Link>
           </li>

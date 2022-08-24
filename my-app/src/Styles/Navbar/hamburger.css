@@ -1,0 +1,111 @@
+/* Individual item */
+
+.bm-item {
+    /* display: inline-block; */
+    height: auto;
+    /* Our sidebar item styling */
+    text-decoration: none;
+    /* margin-bottom: 10px; */
+    color: #fff;
+    transition: color 0.2s;
+   
+  }
+  
+  .bm-menu-wrap {
+    position: fixed;
+    width: 400px !important;
+    top: 0;
+    left: 0;
+    height: auto;
+    overflow: hidden;
+    /* overflow-y: scroll; */
+  }
+  
+  /* Change color on hover */
+  /* .bm-item:hover {
+    color: white;
+  } */
+  
+  
+  /* Position and sizing of burger button */
+  .bm-burger-button {
+    position: relative;
+    width: 16px;
+    height: 13px;
+    
+  }
+  
+  /* Color/shape of burger icon bars */
+  .bm-burger-bars {
+    background: #fff;
+  }
+  
+  /* Position and sizing of clickable cross button */
+  .bm-cross-button {
+    height: 24px;
+    width: 24px;
+    
+  }
+  
+  /* Color/shape of close button cross */
+  .bm-cross {
+    background: #fff;
+  }
+  
+  /* General sidebar styles */
+  .bm-menu {
+    
+    /* border: 3px solid teal; */
+    background: #FFFFFF;
+    padding: 0rem 0rem 0rem 0rem;
+    /* font-size: 1.15em; */
+  }
+  
+  /* Morph shape necessary with bubble or elastic */
+  .bm-morph-shape {
+    fill: #373a47;
+  }
+  
+  /* Wrapper for item list */
+  .bm-item-list {
+    color: #b8b7ad;
+  }
+  
+  /* Styling of overlay */
+  .bm-overlay {
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+  }
+  
+
+
+  /* custom styles  */
+  .menu-item{
+    /* border: 1px solid red; */
+    display: flex !important;
+    height: 52px;
+    padding: 16px;
+    color: #323A44;
+    background: #E5E8EC;
+    align-items: center;
+}
+
+.menu-item2{
+    width: 368px;
+    display: flex !important;
+    /* border: 1px solid red; */
+    height: 56px;
+    color: #1F1F1F;
+    padding: 13px 0px;
+    margin-left:16px;
+    align-items: center;
+}
+
+.cityName{
+    /* border: 1px solid red; */
+    /* float: right; */
+    font-size: 14px;
+    font-weight: bold;
+    color: #10a310;
+}

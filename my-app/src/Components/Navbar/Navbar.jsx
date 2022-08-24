@@ -1,6 +1,8 @@
 import { Box } from "@chakra-ui/react";
 import "../../Styles/Navbar/Navbar.css";
 import Sidebar from "../Navbar/Hamburger";
+import Logo from "./logo";
+import NavTag from "./navTagComp";
 
 function Navbar() {
   return (
@@ -12,7 +14,12 @@ function Navbar() {
             outerContainerClass={"categories"}
           />
         </Box>
+
+        {/* Logo here */}
+          <Logo/>
         
+        {/* nav tag */}
+          <NavTag/>
       </div>
     </>
   );

@@ -1,0 +1,59 @@
+@media (min-width: 900px){
+nav{
+    flex: 1;
+    max-width: 527px;
+    -webkit-transform: translateX(-20px);
+    transform: translateX(-20px);
+    display: unset;
+}
+}
+
+nav ul{
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    font-weight: bold;
+    font-size: 18px;
+    /* -webkit-padding-start: 0px; */
+    padding-inline-start: 0px;
+}
+
+
+ul{
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+nav li{
+    display: flex;
+    align-items: center;
+
+}
+
+.logoHost_Link{
+    background-color: white;
+    padding: 10px 12px;
+    border-radius: 50px;
+    background-image: url("https://www.zoomcar.com/build/e222e7ff96ffdd76290118718d52d71f.svg");
+    background-repeat: no-repeat;
+    background-position: 10% 50%;
+    padding-left: 46.4px;
+}
+
+Link:visited{
+    color: white;
+}
+
+Link{
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.logoHost_Link span{
+    color: black;
+    font-weight: 400;
+
+}

@@ -1,0 +1,28 @@
+
+
+.logoBox {
+  margin: 0 0 0 16px;
+  flex: 1;
+}
+h1{
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+.router_logo_link {
+  background-image: url("https://www.zoomcar.com/build/98e56e8b0b91e8806885a22ac2bf69a7.png");
+  background-repeat: no-repeat;
+  font-size: 0;
+  height: 40px;
+  width: 182px;
+  display: block;
+}
+
+.logoBox Link {
+  cursor: pointer;
+  text-decoration: none;
+}

@@ -2,7 +2,9 @@
 .headerBox{
     width: 100%;
     height: 76px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
+    position: fixed;
+    z-index: 99;
     background: #000000;
     padding: 16px;
     color: #FFFFFF;

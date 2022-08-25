@@ -1,11 +1,11 @@
 .footerBox{
-    border: 1px solid ;
-    bottom: 0;
+    border: 1px solid teal;
+    bottom: 0 !important;
     left: 0;
-    position: fixed;
+    /* position: fixed; */
     width: 100%;
     height: auto;
-    /* margin-top: 150px; */
+    margin-top: 100px;
 }
 .offerBox{
     /* border: 1px solid red; */
@@ -15,7 +15,7 @@
     font-size: 14px;
     font-weight: 600;
     color: #000000;
-    margin: 0px 51.111px;
+    
 }
 
 .footer_bottom{

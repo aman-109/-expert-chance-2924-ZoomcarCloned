@@ -9,11 +9,11 @@ import AppContextProvider from "./Context/AppContext";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <AppContextProvider>
-      <BrowserRouter>
     <ChakraProvider>
+      <BrowserRouter>
         <App />
-    </ChakraProvider>
       </BrowserRouter>
+    </ChakraProvider>
       </AppContextProvider>
   </React.StrictMode>
 );

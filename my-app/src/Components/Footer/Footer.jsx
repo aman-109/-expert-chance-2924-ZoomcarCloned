@@ -23,7 +23,7 @@ export default function Footer() {
         </div>
 
         {/* about accordion */}
-        <Accordion defaultIndex={[0]} bgColor={"#f7f9fb"} allowMultiple>
+        <Accordion  bgColor={"#f7f9fb"} allowToggle>
           <AccordionItem>
             <Box >
               <AccordionButton justifyContent={"center"}>

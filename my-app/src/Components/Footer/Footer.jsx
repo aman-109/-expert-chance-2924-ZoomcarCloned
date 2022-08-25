@@ -15,12 +15,12 @@ export default function Footer() {
   return (
     <>
       <div className="footerBox">
-        <div className="offerBox">
+        {/* <div className="offerBox">
             <Text as={"h3"} mb={"0.5rem"} >OFFERS</Text>
             <div style={{height:"180px"}}>
                 <Img src="https://zoomcar-assets.zoomcar.com/photos/original/67aa017f464b45e52f7bc9a206245e5f15f5a316.jpg" height={"100%"}/>
             </div>
-        </div>
+        </div> */}
 
         {/* about accordion */}
         <Accordion  bgColor={"#f7f9fb"} allowToggle>

@@ -1,6 +1,7 @@
 import { useContext } from "react"
 import { AuthContext } from "../../Context/AppContext"
 import { Box, Flex, Image, Button, Input } from "@chakra-ui/react"
+import Navbar from "../Navbar/Navbar"
 
 export default function CarPage(){
     const {carData}=useContext(AuthContext)
@@ -9,6 +10,10 @@ export default function CarPage(){
 
     return (
         <>
+        <Box>
+          <Navbar/>
+        </Box>
+
          <Box>
       <Box w="58%" m={"auto"} mt={"10px"}>
         <Flex justifyContent="space-between">

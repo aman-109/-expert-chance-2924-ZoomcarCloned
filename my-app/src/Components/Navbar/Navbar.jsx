@@ -1,4 +1,5 @@
 import { Box } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 import "../../Styles/Navbar/Navbar.css";
 import Sidebar from "../Navbar/Hamburger";
 import Logo from "./logo";
@@ -16,7 +17,7 @@ function Navbar() {
         </Box>
 
         {/* Logo here */}
-          <Logo/>
+          <Logo />
         
         {/* nav tag */}
           <NavTag/>

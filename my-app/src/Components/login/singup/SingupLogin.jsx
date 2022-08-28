@@ -15,7 +15,7 @@ import { AuthContext } from "../../../Context/AppContext";
 
 export default function SignupLogin() {
   const toast = useToast()
-  const {auth,setAuth} =useContext(AuthContext)
+  const {auth,setAuth,setCheckAuth} =useContext(AuthContext)
   const [userExist, setUserExist] = useState(false);
   const [isExist, setExist] = useState(true);
   const navigate = useNavigate()
@@ -106,6 +106,7 @@ export default function SignupLogin() {
       navigate("/")
     },2000)
     // setAuth(user)
+    setCheckAuth(true)
   }
 
   return (

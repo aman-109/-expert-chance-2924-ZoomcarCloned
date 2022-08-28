@@ -2,13 +2,25 @@ import { Box, Text } from "@chakra-ui/react";
 import React from "react";
 import { slide as Menu } from "react-burger-menu";
 import "../../Styles/Navbar/hamburger.css";
+import { useContext } from "react";
+import { AuthContext } from "../../Context/AppContext";
+import "../../Styles/Navbar/navTag.css";
+
+
 export default (props) => {
+  const { checkAuth, auth } = useContext(AuthContext);
+
   // console.log(props);
   return (
     <Menu {...props}>
       <Box className="menu-item">
         <span class="material-symbols-outlined">person</span>
-        <Text ml={"10px"}>Login or Signup</Text>
+        <Text ml={"10px"}>
+          {
+            checkAuth===true ?
+            `${auth.Name}` : "Login or Signup"
+          }
+         </Text>
       </Box>
 
       <Box className="menu-item2">

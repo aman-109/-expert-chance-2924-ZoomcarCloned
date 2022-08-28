@@ -1,5 +1,7 @@
 import { Box } from "@chakra-ui/react";
+import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../../Context/AppContext";
 import "../../Styles/Navbar/Navbar.css";
 import Sidebar from "../Navbar/Hamburger";
 import Logo from "./logo";

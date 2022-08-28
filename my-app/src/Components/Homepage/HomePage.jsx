@@ -6,6 +6,7 @@ import {
   Flex,
   Input,
   Text,
+  Select,
 } from "@chakra-ui/react";
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
 import { VscArrowSwap } from "react-icons/vsc";
@@ -15,10 +16,45 @@ import { Offers } from "./Offers/Offers";
 import { Promo } from "./Promo/Promo";
 import ReferAndEarn from "./ReferAndEarn/ReferAndEarn";
 import { useState } from "react";
+import { useEffect } from "react";
+import { useContext } from "react";
+import { AuthContext } from "../../Context/AppContext";
 
 export default function Homepage() {
   const navigate = useNavigate();
+  const {setCarData} =useContext(AuthContext)
   const [isAirportClick, setIsAirportClick] = useState(false);
+  const [city,setCity] =useState("")
+  
+useEffect(()=>{
+
+  getData(city)
+},[city])
+
+  const getData=(city)=>{
+    // console.log(city)
+    fetch(`http://zoomcar-servertest.herokuapp.com/${city}`)
+    .then((res)=>{
+      return res.json()
+    })
+    .then((res)=>{
+      // console.log(res)
+      setCarData(res)
+    })
+    .catch(err=>
+      (console.log(err))
+    )
+  }
+
+  const selectCity=(e)=>{
+    // console.log(e.target.value)
+    setCity(e.target.value)
+  }
+
+  const findCarFunction=()=>{
+    navigate("/carsPage")
+  }
+
   return (
     <>
       <div
@@ -88,15 +124,21 @@ export default function Homepage() {
                   </TabList>
                   <TabPanels>
                     <TabPanel>
-                      <Button
+                      <Select
                         //   onClick={checkLogin}
+                        onChange={selectCity}
+                        placeholder="Pick Up City"
                         bg="white"
                         w={"100%"}
                         border="1px solid grey"
                         mb={2}
                       >
+                        <option value="mumbai">Mumbai</option>
+                        <option value="pune">Pune</option>
+                        <option value="nagpur">Nagpur</option>
+                        
                         {"Pick Up City, Airport, Address or Hotel"}
-                      </Button>
+                      </Select>
                       {/* <Button
                         //   onClick={checkLogin}
                         bg="white"
@@ -136,7 +178,7 @@ export default function Homepage() {
               <Button
                 bg="#34ec53"
                 w={"95%"}
-                onClick={() => navigate("/carsPage")}
+                onClick={findCarFunction}
                 style={{ color: "white" }}
                 //   disabled={
                 //     DateTime.sDateAndTime == "" || cookies.startDT == undefined && address == "" || cookies.Address == undefined

@@ -3,7 +3,7 @@ import React from "react";
 import { slide as Menu } from "react-burger-menu";
 import "../../Styles/Navbar/hamburger.css";
 export default (props) => {
-  console.log(props);
+  // console.log(props);
   return (
     <Menu {...props}>
       <Box className="menu-item">

@@ -1,9 +1,13 @@
 import { Link, Text } from "@chakra-ui/react";
+import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../../Context/AppContext";
 import "../../Styles/Navbar/navTag.css"
 
 export default function NavTag() {
   const navigate = useNavigate()
+  const {auth} = useContext(AuthContext)
+  // console.log(auth)
   return (
     <>
       <nav>

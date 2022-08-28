@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 import "../../../Styles/signup/signup.css";
 import LoGin from "./Login";
 import Signup from "./Signup";
-import axios from "axios";
+import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../../Context/AppContext";
 
@@ -18,6 +18,7 @@ export default function SignupLogin() {
   const {auth,setAuth} =useContext(AuthContext)
   const [userExist, setUserExist] = useState(false);
   const [isExist, setExist] = useState(true);
+  const navigate = useNavigate()
 
 
   const [user, setUser] = useState({
@@ -44,10 +45,18 @@ export default function SignupLogin() {
 
   const toaster=()=>{
     return toast({title: 'User not found !',
-    description: "We've created your account for you.",
+    description: "Please create your account.",
     status: 'warning',
     position:"top-right",
-    duration: 3000,
+    duration: 2000,
+    isClosable: true})
+  }
+  const successToaster=()=>{
+    return toast({title: 'Success',
+    description: "Account Created Successfully.",
+    status: 'success',
+    position:"top-right",
+    duration: 1000,
     isClosable: true})
   }
 
@@ -91,6 +100,14 @@ export default function SignupLogin() {
       // });
   }
 
+  const handleSignup=()=>{
+    successToaster()
+    setTimeout(()=>{
+      navigate("/")
+    },2000)
+    // setAuth(user)
+  }
+
   return (
     <Box>
       <Box p={8} w="40%" m={"auto"} mt={5}>
@@ -121,7 +138,7 @@ export default function SignupLogin() {
                 ) : (
                   <Signup
                     handleChange={handleChange}
-                    // handleSignup={handleSignup}
+                    handleSignup={handleSignup}
                   />
                 )}
               </Box>

@@ -26,7 +26,7 @@ export default function NavTag() {
             <Link href="/zoomcar-mobility-services">ZMS</Link>
           </li>
           <li>
-            <Link onClick={() => navigate("/login")} class="">
+            <Link onClick={() => navigate("/login")} >
               {checkAuth === true ? (
                 <span style={{ display: "flex", gap: "1rem",alignItems:"center" }}>
                   <CgProfile size={"2em"}/>

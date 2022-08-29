@@ -22,29 +22,16 @@ import { AuthContext } from "../../Context/AppContext";
 
 export default function Homepage() {
   const navigate = useNavigate();
-  const {setCarData} =useContext(AuthContext)
+  const {getCityCarData} =useContext(AuthContext)
   const [isAirportClick, setIsAirportClick] = useState(false);
   const [city,setCity] =useState("")
   
 useEffect(()=>{
 
-  getData(city)
+  getCityCarData(city)
 },[city])
 
-  const getData=(city)=>{
-    // console.log(city)
-    fetch(`http://zoomcar-servertest.herokuapp.com/${city}`)
-    .then((res)=>{
-      return res.json()
-    })
-    .then((res)=>{
-      // console.log(res)
-      setCarData(res)
-    })
-    .catch(err=>
-      (console.log(err))
-    )
-  }
+  
 
   const selectCity=(e)=>{
     // console.log(e.target.value)
@@ -52,7 +39,7 @@ useEffect(()=>{
   }
 
   const findCarFunction=()=>{
-    navigate("/carsPage")
+    navigate(`/carsPage/${city}`)
   }
 
   return (

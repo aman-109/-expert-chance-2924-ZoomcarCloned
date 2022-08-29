@@ -70,7 +70,7 @@ export default function CarPage() {
                     <Box mr={2} mt={1}>
                       <AiFillStar />
                     </Box>
-                    {/* <Box>{e.car_data.rating.text}</Box> */}
+                    <Box>{e.car_data.rating.text}</Box>
                   </Flex>
                   <Box color="green" fontWeight="bold">
                     {e.car_data.pricing.payable_amount}
